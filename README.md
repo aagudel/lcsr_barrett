@@ -20,6 +20,8 @@ The controllers, built as Orocos RTT components, can be found in the following p
 * [**`conman`**](https://github.com/jbohren/conman) A dynamically-switching controller manager architecture
 * [**`lcsr_controllers`**](https://github.com/jhu-lcsr/lcsr_controllers) A collection of robot-agnostic controllers which use the above frameworks
 
+For the real arm, an [**external WAM computer**](http://support.barrett.com/wiki/WAM/ExternalPCSetup) is required.
+
 When running the arm in simulation, we also use the following tools:
 * [**Gazebo**](http://www.gazebosim.org) A modular physical 3D simulation framework
 * [**`rtt_gazebo`**](https://github.com/jhu-lcsr/rtt_gazebo) Tools for running Orocos RTT components in Gazebo
@@ -92,6 +94,7 @@ rosdep install --from-paths . --ignore-src
 # build the workspace
 catkin build
 ```
+If you are building the workspace on an Ubuntu 12.04 with Xenomai 2.6.1 (Recommended by Barrett) you might have to [patch Xenomai](http://www.xenomai.org/pipermail/xenomai/2012-December/027131.html).
 
 ### Usage
 
